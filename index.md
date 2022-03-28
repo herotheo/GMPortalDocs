@@ -8,7 +8,7 @@ layout: home
 
 ## 功能
 
-	### TLS
+#### TLS
 
 1. 支持普通TLS连接和国密TLS连接
 
@@ -70,7 +70,7 @@ layout: home
 
 12. 支持LDAP/HTTP/FTP下载CRL方式
 
-### YARP
+#### YARP
 
 1. 集群配置
 
