@@ -1,27 +1,152 @@
 ---
-layout: home
+layout: home  
 ---
 
-测试二级
+## 介绍
 
-## Demo
+该网关将TLS握手过程，在网关完成，后续客户端发送到后端服务器的加密数据将在网关中将其解密为 HTTP 明文，通过网关发往后端服务器，从而优化后端服务器的性能，同时确保工作负载的安全。
 
-Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
+## 功能
 
-[![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
+	### TLS
 
-## Why Jekyll with GitBook
+1. 支持普通TLS连接和国密TLS连接
 
-GitBook is an amazing frontend style to present and organize contents (such as book chapters
-and blogs) on Web. The typical to deploy GitBook at [Github Pages][1]
-is building HTML files locally and then push to Github repository, usually to the `gh-pages`
-branch. It's quite annoying to repeat such workload and make it hard for people do version
-control via git for when there are generated HTML files to be staged in and out.
+   > 普通TLS: TLS 1.0、TLS 1.1、TLS 1.2、TLS 1.3
+   >
+   > 国密TLS: GMSSL(0x0101)
 
-This theme takes style definition out of generated GitBook site and provided the template
-for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
-to [Github Pages][1] without generating and uploading HTML bundle every time when there are
-changes to the original repo.
+2. 支持4个国密密码套件和258个国际密码套件
+
+   > 国密密码套件：
+   >
+   > ​					ECC_SM4_CBC_SM3 （0xE013）
+   >
+   > ​					ECC_SM4_GCM_SM3（0xE053）
+   >
+   > ​					ECDHE_SM4_CBC_SM3 （0xE011）
+   >
+   > ​					ECDHE_SM4_GCM_SM3（0xE051）
+   >
+   >  国际密码套件：
+   >
+   > ​					TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xC030)
+   >
+   > ​					TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xC02F)
+   >
+   > ​					......
+
+3. 支持RSA、SM2自适应功能
+
+   > 同一个虚拟服务，客户端环境是国密的自动选择国密套件、不具备国密环境自动走RSA套件
+
+4. 国际国密均支持双向SSL认证
+
+5. 支持TLS入站过滤
+
+   > 对TLS版本、套件、SNI(域名)、证书的过滤
+
+6. 支持TCP复用
+
+7. 支持X-FORWORD-FOR源地址透传方式
+
+8. 国密TLS和国际TLS均支持SNI功能
+
+   > 同一个虚拟服务可以启用多个域名站点证书
+
+9. 支持自定义导入TLS过程中使用到的国际/国密的加密证书、签名证书
+
+10. 支持为不同SNI配置不同功能
+
+    > ​	如：要求使用的TLS协议
+    >
+    > ​			返回给客户端的服务端证书
+    >
+    > ​			是否需要客户端证书
+    >
+    > ​			......
+
+11. 支持弱算法过滤，设置限制加密套件强度，也可手动调整不同加密套件优先级
+
+12. 支持LDAP/HTTP/FTP下载CRL方式
+
+### YARP
+
+1. 集群配置
+
+   * HTTP客户端配置
+
+     > 支持配置网关对后端服务器启用的SSL协议
+     >
+     > 支持配置后端服务器的最大连接数
+     >
+     > 支持配置网关是否检查后端服务器的 SSL 证书有效性
+     >
+     > 支持配置向后端服务器传出请求标头启用非 ASCII 编码，为所有标头使用选定的编码
+
+   * HTTP请求配置
+
+     > 支持配置网关对后端服务器传出请求的HTTP版本
+     >
+     > 支持配置网关对后端服务器协商最终的 HTTP 版本的策略
+     >
+     > 支持配置在网关将响应发送回客户端时是否向托管反向代理的服务器中写入缓存
+     >
+     > 支持配置网关对端服务器HTTP请求的超时时间
+
+   * 负载均衡
+
+     > 支持负载均衡策略：
+     >
+     > 随机（Random）: 随机选择一个目的地。
+     >
+     > 最少请求（LeastRequests）：选择请求分配最少的目的地
+     >
+     > 循环（RoundRobin）：通过按顺序循环选择一个目的地
+     >
+     > 字母顺序第一个（FirstAlphabetical）：选择按字母顺序排列的第一个可用目的地，而不考虑负载。
+     >
+     > 两次随机选择（PowerOfTwoChoices）：选择两个随机目的地，然后选择请求分配最少的一个。
+
+   * 健康检查
+
+     > 支持设置主动/被动健康检查，以检查后端服务器的健康情况，减少后端服务器故障对客户端请求造成的负面影响
+
+   * 会话关联
+
+     > 通过设置会话关联一种将因果相关的请求序列绑定到处理这个序列第一个请求的后端服务器上，例如A客户端的请求都到A服务器上，从而有效的避免请求被分配到多台后端服务器，造成的并发问题。
+
+2. 路由配置
+
+   * 认证和授权
+
+     > 支持为每个路由指定授权策略，进而实现在将请求代理到后端服务器之前对其进行身份验证和授权。
+
+   * 跨域请求（CORS）
+
+     > 支持为每个路由指定 CORS 策略，进而实现在将跨域请求代理到后端服务器之前对其进行处理
+
+   * 配置请求中的标头
+
+     > 支持指定一个或多个必须出现在请求中的标头，根据设置的标头路由到指定地址
+
+   * 路径或主机配置
+
+     > 支持设置路由要匹配的请求路径或主机，根据设置的请求路径或主机路由到指定地址
+
+   * 请求转换和响应转换
+
+     > 支持对转换进行配置来修改代理请求中的请求或响应的部分内容，以适应后端服务器的要求或传输额外的数据。
+
+
+
+
+
+
+
+## 其它
+
+相关产品：[商用密码应用与检测工具箱](https://www.ailawuyou.com/micetoolbox/)
 
 ## How to Get Started
 
