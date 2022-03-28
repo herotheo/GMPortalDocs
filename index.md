@@ -9,6 +9,7 @@ layout: home
 1. 支持SM2和RSA双证书模式，支持SM2证书和国密套件进行https SSL加密通信，也同时支持使用RSA证书和国际标准套件进行https SSL加密通信。
 2. 国密支持 GCM和CBC算法
 3. 支持SM2、SM3、SM4国产密码算法，支持国密SSL规范GM/T 0024-2014。
+4. 支持集成身份认证和权限控制
 
 ## 功能
 
@@ -74,7 +75,7 @@ layout: home
 
 12. 支持LDAP/HTTP/FTP下载CRL方式
 
-#### YARP
+12. 支持将客户端证书通过HTTP header, cookie, URL字段传送到后台服务器
 
 1. 集群配置
 
