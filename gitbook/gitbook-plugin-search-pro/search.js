@@ -93,7 +93,7 @@ require([
         var results = [],
             index = -1;
         for (var page in INDEX_DATA) {
-            if ((index = INDEX_DATA[page].body.toLowerCase().indexOf(keyword.toLowerCase())) !== -1) {
+            if ((index = INDEX_DATA[page].body.indexOf(keyword)) !== -1) {
                 results.push({
                     url: page,
                     title: INDEX_DATA[page].title,
