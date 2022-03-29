@@ -10,7 +10,7 @@ layout: post
 
 todo
 
-## 配置SNI
+## 配置多域名
 
 todo
 
