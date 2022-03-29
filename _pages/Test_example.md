@@ -1,7 +1,7 @@
 ---
 title: 2.测试实例
 author: 张雄飞
-date: 2022-3-29 11:40:52
+date: 2022-3-29
 category: Jekyll
 layout: post
 ---

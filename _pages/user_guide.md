@@ -1,7 +1,7 @@
 ---
 title: 3.用户指南
 author: 张雄飞
-date: 2022-3-29 11:40:53
+date: 2022-3-29
 category: Jekyll
 layout: post
 ---
