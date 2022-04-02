@@ -12,6 +12,12 @@ layout: post
 
 通过密版Wireshark抓包可以看到，通讯使用国密套件：ECC_SM4_GCM_SM3，成功建立国密通信连接。
 
+<div>
+    <img src="{{ site.baseurl}}/img/toajian1.png" width="200" height="200"><
+</div>
+
+
+
 ![toajian1](../image/toajian1.png)
 
 第二次更换国密套件进行访问 此处使用国密套件：ECC_SM4_CBC_SM3并且也成功建立国密通信
