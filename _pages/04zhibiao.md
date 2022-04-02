@@ -12,11 +12,11 @@ layout: post
 
 通过密版Wireshark抓包可以看到，通讯使用国密套件：ECC_SM4_GCM_SM3，成功建立国密通信连接。
 
-![image-20220402172635102](image/image-20220402172635102.png)
+![image-20220402172635102](../image/toajian1.png)
 
 第二次更换国密套件进行访问 此处使用国密套件：ECC_SM4_CBC_SM3并且也成功建立国密通信
 
-![image-20220402174618568](image/image-20220402174618568.png)
+![image-20220402174618568](../image/toajian2.png)
 
 
 
