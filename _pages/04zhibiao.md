@@ -19,7 +19,7 @@ layout: post
 第二次更换国密套件进行访问 此处使用国密套件：ECC_SM4_CBC_SM3并且也成功建立国密通信
 
 <div>
-    <img src="{{ site.baseurl}}/image/toajian2" width="950" height="400">
+    <img src="{{ site.baseurl}}/image/toajian2.png" width="950" height="400">
 </div>
 
 
