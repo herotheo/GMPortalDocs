@@ -32,7 +32,7 @@ layout: post
 使用"国密数字证书"自签证书。
 
 <div>
-    <img src="{{ site.baseurl}}/image/danxiang.png" width="950" height="550">
+    <img src="{{ site.baseurl}}/image/danxiang.png" width="1050" height="550">
 </div>
 
 
@@ -43,14 +43,14 @@ layout: post
 2. 准备好硬件Key后，访问“新渡-国密WEB应用安全网关”(https://home.hccie.com:21443)，并使用国密版Wireshark抓包记录
 
    <div>
-       <img src="{{ site.baseurl}}/image/shuangxiang1.png" width="950" height="550">
+       <img src="{{ site.baseurl}}/image/shuangxiang1.png" width="950" height="600">
    </div>
 
 
    成功访问
 
    <div>
-       <img src="{{ site.baseurl}}/image/shuangxiang2.png" width="950" height="400">
+       <img src="{{ site.baseurl}}/image/shuangxiang2.png" width="950" height="650">
    </div>
 
 3. 查看Wireshark抓包记录，可以看到网关发送的客户端证书请求和客户端返回的证书请求
