@@ -39,7 +39,7 @@ layout: post
 
 #### 2. 国密双向认证
 
-1. 准备将密钥证书写入的硬件key
+1. 准备将密钥证书写入的硬件key，并将国密证书导入
 
 2. 准备好硬件Key后，访问“新渡-国密WEB应用安全网关”(https://home.hccie.com:21443)，并使用国密版Wireshark抓包记录
 
@@ -76,31 +76,39 @@ layout: post
     <img src="{{ site.baseurl}}/image/zishiyingzhuaba.png" width="950" height="450">
 </div>
 
+## 4.国际TLS自定义密码套件过滤
 
-
-## 4. 支持http1 和http2 、支持grpc
-
-todo
+todo 测试了之前写的代码在linux 上 并没有起作用
 
 ## 5. 配置多域名等参数
 
-todo 关键图放在这里
+​	通过配置文件appsettings.json进行配置
 
+* **国际访问配置**
 
+  <div>
+      <img src="{{ site.baseurl}}/image/sni_guoji.png" width="950" height="450">
+  </div>
 
-## 6. 使用Keepalived提供高可用功能
+* **国密访问配置**
+
+  <div>
+      <img src="{{ site.baseurl}}/image/sni_gm.png" width="950" height="450">
+  </div>
+
+## 6. 支持http1 和http2 、支持grpc
 
 todo
 
-## 7. 负载均衡
+## 7. 使用Keepalived提供高可用功能
 
 todo
 
-## 8. 性能测试
+## 8. 负载均衡
 
 todo
 
-## 9. 国际TLS自定义密码套件过滤
+## 9. 性能测试
 
 todo
 
