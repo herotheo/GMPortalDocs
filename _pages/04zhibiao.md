@@ -8,9 +8,10 @@ layout: post
 
 <p>
     <b style="color:red">
-       注:以下测试均使用"奇安信安全浏览器"访问“新渡-国密WEB应用安全网关”(https://home.hccie.com:21443)，使用国密版Wireshark抓包分析。
+       注:以下有关国密的测试均使用"奇安信安全浏览器"访问“新渡-国密WEB应用安全网关”(https://home.hccie.com:21443)，使用国密版Wireshark抓包分析。
     </b>
 </p>
+
 ## 1. 国密套件
 
 通过密版Wireshark抓包可以看到，通讯使用国密套件：ECC_SM4_GCM_SM3，成功建立国密通信连接。
@@ -32,7 +33,7 @@ layout: post
 使用"国密数字证书"自签证书。
 
 <div>
-    <img src="{{ site.baseurl}}/image/danxiang.png" width="1050" height="550">
+    <img src="{{ site.baseurl}}/image/danxiang.png" width="950" height="450">
 </div>
 
 
@@ -61,7 +62,19 @@ layout: post
 
 
 
-## 3. 国密国际自适应
+## 3. 国密国际访问自适应
+
+同时使用"谷歌浏览器"和"奇安信安全浏览器"访问"新渡-国密WEB应用安全网关" ，均访问成功
+
+<div>
+    <img src="{{ site.baseurl}}/image/zishiying.png" width="950" height="450">
+</div>
+
+使用国密版Wireshark抓包分析
+
+<div>
+    <img src="{{ site.baseurl}}/image/zishiyingzhuaba.png" width="950" height="450">
+</div>
 
 
 
