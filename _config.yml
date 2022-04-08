@@ -42,8 +42,17 @@ exclude:
 
 collections:
   pages:
-    output: true
-    permalink: /:collection/:path/
+    #output: true
+    #permalink: /:collection/:path/
+    # 手动添加排序
+     order:
+       - 01zhibiao.md
+       - 0101taojian.md
+       - 0102danshuang.md
+       - 0103zishiying.md
+       - 02yingyong.md
+       - 03zuijia.md
+       - 04chapindongtai.md
 
 destination:      ./_site
 incremental:      false
