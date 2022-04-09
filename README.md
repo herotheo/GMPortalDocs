@@ -1,77 +1,86 @@
-# Jekyll GitBook
 
-网关介绍页面项目
+|             访问本页面网址             |      浏览器      |     密码套件     | 是否经过"新渡网关" |
+| :------------------------------------: | :--------------: | :--------------: | :----------------: |
+|     https://home.hccie.com:21443/      | 奇安信可信浏览器 | **国密算法套件** |         是         |
+|     https://home.hccie.com:21443/      |    谷歌浏览器    |   国际算法套件   |         是         |
+| https://www.ailawuyou.com/GMPortalDocs | 奇安信可信浏览器 |   国际算法套件   | 否（模拟后端系统） |
+| https://www.ailawuyou.com/GMPortalDocs |    谷歌浏览器    |   国际算法套件   | 否（模拟后端系统） |
 
-## Demo
+<p>
+    <b style="color:red">
+        注：由于后端系统部署在GitHub上，国内部分区域访问较慢，并不代表网关转化性能。
+    </b>
+</p>
 
-Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
+## 1.产品介绍
 
-[![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
+​		”新渡-国密安全WEB网关（GMSWG）“是通过国密算法和国际算法实现，支持与WEB应用建立国密安全网络连接或国际安全网络连接的网关产品。满足国家标准《GBT 38636-2020 信息安全技术 传输层密码协议（TLCP）》，建立国密安全网络连接使用国密算法对传输数据进行加密，保证数据安全防止数据泄露。它还可阻止未经授权的用户访问。支持基于证书的服务器和客户端身份认证，提供数据在传输过程中的机密性和完整性保护。全面支持SSL/TLS协议，产品自带负载均衡、跨域请求等功能。
 
-## Why Jekyll with GitBook
+​		”新渡-国密安全WEB网关（GMSWG）“将TLS握手过程在网关完成，从而优化后端服务器的性能，同时确保工作负载的安全。
 
-GitBook is an amazing frontend style to present and organize contents (such as book chapters
-and blogs) on Web. The typical to deploy GitBook at [Github Pages][1]
-is building HTML files locally and then push to Github repository, usually to the `gh-pages`
-branch. It's quite annoying to repeat such workload and make it hard for people do version
-control via git for when there are generated HTML files to be staged in and out.
+## 2.应用场景
 
-This theme takes style definition out of generated GitBook site and provided the template
-for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
-to [Github Pages][1] without generating and uploading HTML bundle every time when there are
-changes to the original repo.
 
-## How to Get Started
 
-This theme can be used just as other [Jekyll themes][1].
+## 3.产品优势
 
-[Fork][3] this repository and add your markdown posts to the `_posts` folder.
+1. 双算法的支持
 
-### Deploy Locally with Jekyll Serve
+   > 既支持国密访问又支持国际访问。
 
-This theme can be ran locally using Ruby and Gemfiles.
+1. 高可用
 
-[Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
+   > 采用Keepalived高可用架构， 故障时秒级切换，保证会话不中断，业务无感知。
 
-## Full-text search
+3. 更安全
 
-The search functionality in jekyll-gitbook theme is powered by the [gitbook-plugin-search-pro][5] plugin and is enabled by default.
+   > 使用国密SLL对传输数据进行加密，保证数据安全可靠。
+   >
+   > 集成身份认证和权限控制，对访问者身份进行验证，控制访问者的权限，保证内部网络的安全。
 
-[https://sighingnow.github.io/jekyll-gitbook/?q=generated](https://sighingnow.github.io/jekyll-gitbook/?q=generated)
+3. 覆盖广
 
-## Code highlight
+   > 全面支持Windows、MAC、Linux等主流操作系统及主流浏览器接入，同时支持应用单点登录等功能。
 
-The code highlight style is configurable the following entry in `_config.yaml`:
+4. 易使用
 
-```yaml
-syntax_highlighter_style: colorful
-```
+   > 配置实时生效，并将系统部署和管理化繁为简，管理容易，使用方便。
 
-The default code highlight style is `colorful`, the full supported styles can be found from [the rouge repository][6]. Customized
-style can be added to [./gitbook/rouge/](./gitbook/rouge/).
+## 4.产品功能
 
-## How to generate TOC
+1. 多方面的安全保护机制
 
-The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
-The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
-configuration in `_config.yml`:
+   > 提供对访问用户的证书认证、协议认证、身份及权限的访问控制等多方面的安全保护机制，管理员可以通过配置特定的策略，保证内网资源的安全访问。
 
-```yaml
-toc:
-    enabled: true
-    h_min: 1
-    h_max: 3
-```
+2. 多网站保护
 
-## License
+   > 一个服务器通过配置多个不同的域名和域名的相关证书、使用协议等来保护多个网站
 
-This work is open sourced under the Apache License, Version 2.0.
+3. 国际国密访问自适应
 
-Copyright 2019 Tao He.
+   > 同一个虚拟服务，客户端环境是国密的自动选择国密套件、不具备国密环境自动走RSA套件。
+   >
+   > 不管用户是国密证书还是国际RSA证书都可进行正常访问。
 
-[1]: https://pages.github.com
-[2]: https://pages.github.com/themes
-[3]: https://github.com/sighingnow/jekyll-gitbook/fork
-[4]: https://github.com/allejo/jekyll-toc
-[5]: https://github.com/gitbook-plugins/gitbook-plugin-search-pro
-[6]: https://github.com/rouge-ruby/rouge/tree/master/lib/rouge/themes
+4. 支持全部完全由国密算法实现的密码套件
+
+   > 支持4个国密密码套件：
+   >
+   > ECC_SM4_CBC_SM3 （0xE013）
+   >
+   > ECC_SM4_GCM_SM3（0xE053）
+   >
+   > ECDHE_SM4_CBC_SM3 （0xE011）
+   >
+   > ECDHE_SM4_GCM_SM3（0xE051）
+
+5. 算法安全与标准
+
+   >支持SM2、SM3、SM4国产密码算法，符合国家标准《GBT 35276-2017 信息安全技术 SM2密码算法使用规范》、《GBT 38636-2020 信息安全技术 传输层密码协议（TLCP）》、《GB/T 38636-2020(协议部分)》、《GMT_0025-2014_SSL_VPN网关产品规范》
+   >
+   
+   
+
+## 其它
+
+相关产品：[商用密码应用与检测工具箱](https://www.ailawuyou.com/micetoolbox/)
