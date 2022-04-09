@@ -1,7 +1,7 @@
 1. 首先我们打开国密版Wireshark，过滤条件为"**tls&&ip.addr==网关地址**",用于抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
 
    <div>
-       <img src="{{ site.baseurl}}/image/Wireshark.png" width="650" height="400">
+       <img src="image/Wireshark.png" width="650" height="400">
    </div>
 
 2. 然后我们使用"奇安信安全浏览器"访问“新渡-国密安全WEB网关（GMSWG）”，由图可看出成功建立国密连接，并且使用SM4_CBC进行加密
