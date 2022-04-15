@@ -1,32 +1,23 @@
 
 
-下面结合浏览器访问“新渡-国密安全WEB网关（GMSWG）”的实际访问效果和抓包数据对“新渡-国密安全WEB网关（GMSWG）”的主要功能进行演示。
+# 1.产品指标演示
+
+下面结合WEB应用访问“新渡-国密安全WEB网关（GMSWG）”的实际访问效果和抓包数据对“新渡-国密安全WEB网关（GMSWG）”的主要功能进行演示。
 
 <p style="color:red;font-weight:bold">
-       注:以下有关国密测试均使用"奇安信安全浏览器"访问“新渡-国密安全WEB网关（GMSWG）”，使用国密版Wireshark抓包分析。
+       注:演示过程中有关国密测试均使用"奇安信安全浏览器"访问“新渡-国密安全WEB网关（GMSWG）”，使用国密版Wireshark抓包分析。
 </p>
 
+* 奇安信安全浏览器
 
-1. [国密套件功能验证]()
+  [奇安信安全浏览器下载](https://www.qianxin.com/ctp/gmbrowser.html)
 
-2. [国密TLS的单向认证和双向认证]()
+  ![image-20220415161139814](../image/image-20220415161139814.png ':size=50%')
+  
+* 国密版Wireshark
 
-   2.1 [国密单向认证]()
+  [国密版Wireshark下载地址](https://github.com/pengtianabc/wireshark-gm/releases/download/wireshark-3.4.5-gm/Wireshark-win64-3.4.5.exe)
 
-   2.2 [国密双向认证]()
-
-3. [国密国际访问自适应]()
-
-4. [国际TLS自定义密码套件过滤]()
-
-5. [配置多域名等参数]()(这个以后不会是配置文件的形式，所以先不写)
-
-6. [支持http1 和http2 、支持grpc]()
-
-7. [使用Keepalived提供高可用功能]()
-
-8. [负载均衡]()
-
-9. [性能测试]()
-
-10. 后面就是对yarp的一些配置
+  ![image-20220415162523874](../image/image-20220415162523874.png ':size=50%')
+  
+  
