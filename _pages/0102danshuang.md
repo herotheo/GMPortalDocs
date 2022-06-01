@@ -6,7 +6,7 @@
 
 * 演示过程：
 
-  1. 首先我们打开国密版Wireshark，过滤条件为"**tls&&ip.addr==网关地址**",用于抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
+  1. 首先我们打开Wireshark，过滤条件为"**tls&&ip.addr==网关地址**",用于抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
 
      ![Wireshark](../image/Wireshark.png ':size=75%')
 
@@ -14,7 +14,7 @@
 
      ![gm_cbc](../image/gm_cbc.png ':size=75%')
 
-  3. 查看国密版Wireshark抓取的数据包，由图可以看到此次通讯为标准的单向认证过程
+  3. 查看Wireshark抓取的数据包，由图可以看到此次通讯为标准的单向认证过程
 
      ![danxiang](../image/danxiang.png ':size=75%')
 
@@ -38,7 +38,7 @@
 
      ![gm_cbc](../image/gm_cbc.png ':size=75%')
 
-  5. 查看国密版Wireshark抓取的数据包，由图可以看到此次通讯为标准的TLS双向认证过程
+  5. 查看Wireshark抓取的数据包，由图可以看到此次通讯为标准的TLS双向认证过程
 
      ![shuang_wireshark](../image/shuang_wireshark.png ':size=75%')
 

@@ -6,7 +6,7 @@
 
 * 演示过程：
 
-  1. 首先我们打开国密版Wireshark，过滤条件为"**tls&&ip.addr==网关地址**",用于抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
+  1. 首先我们打开Wireshark，过滤条件为"**tls&&ip.addr==网关地址**",用于抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
 
      ![Wireshark](../image/Wireshark.png ':size=75%')
 
@@ -18,7 +18,7 @@
 
      ![google](../image/google.png ':size=75%')
 
-  4. 查看国密版Wireshark抓取的数据包，由图可以看出即成功建立了国密通信又成功建立了国际通信
+  4. 查看Wireshark抓取的数据包，由图可以看出即成功建立了国密通信又成功建立了国际通信
 
      ![Wireshark_gmgj](../image/Wireshark_gmgj.png ':size=75%')
 
