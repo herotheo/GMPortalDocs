@@ -6,9 +6,9 @@
 
 * 演示过程：
 
-  1. 首先我们打开Wireshark，过滤条件为"**tls&&ip.addr==网关地址**",用于抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
+  1. 首先我们打开[商用密码检测工具箱](https://www.ailawuyou.com/micetoolbox/)，进入流量分析，选择网络接口，过滤条件为"**host 网关地址**",然后我们勾选"SSL|VPN交互过程分析"，然后点击开始按钮，抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
 
-     ![Wireshark](../image/Wireshark.png ':size=75%')
+     ![image-20220602164019887](../image/MiCeZhua.png ':size=75%')
 
   2. 先使用"奇安信安全浏览器"访问"新渡-国密安全WEB网关（GMSWG）",由图可见成功访问
 
@@ -18,8 +18,12 @@
 
      ![google](../image/google.png ':size=75%')
 
-  4. 查看Wireshark抓取的数据包，由图可以看出即成功建立了国密通信又成功建立了国际通信
+  4. 查看抓取的数据包，由图可以看出即成功建立了国密通信又成功建立了国际通信
 
-     ![Wireshark_gmgj](../image/Wireshark_gmgj.png ':size=75%')
+     ![image-20220602165919766](../image/image-20220602165919766.png ':size=75%')
+  
+     ![image-20220602170010701](../image/image-20220602170010701.png ':size=75%')
+  
+     
 
 至此，"新渡-国密安全WEB网关（GMSWG）"国际国密访问自适应演示完毕，结果与预期结果相同。
