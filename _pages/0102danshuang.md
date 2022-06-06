@@ -30,17 +30,21 @@
 
   2. 然后准备用于存放国密证书的硬件key，并将国密证书导入
 
-  3. 连接硬件key，然后我们使用"奇安信安全浏览器"访问“新渡-国密安全WEB网关（GMSWG）”，由图可以看到弹出了选择证书的页面，选择相应的国密证书，并输入硬件key的密码后点击确定
+  3. 我们打开[商用密码检测工具箱](https://www.ailawuyou.com/micetoolbox/)，进入流量分析，选择网络接口，过滤条件为"**host 网关地址**",然后我们勾选"SSL|VPN交互过程分析"，然后点击开始按钮，抓取浏览器访问“新渡-国密安全WEB网关（GMSWG）”的数据
+
+     ![image-20220602164019887](../image/MiCeZhua.png ':size=75%')
+
+  4. 连接硬件key，然后我们使用"奇安信安全浏览器"访问“新渡-国密安全WEB网关（GMSWG）”，由图可以看到弹出了选择证书的页面，选择相应的国密证书，并输入硬件key的密码后点击确定
 
      ![shuangxiang](../image/shuangxiang.png ':size=75%')
 
-  4. 成功访问
+  5. 成功访问
 
      ![gm_cbc](../image/gm_cbc.png ':size=75%')
 
-  5. 查看Wireshark抓取的数据包，由图可以看到此次通讯为标准的TLS双向认证过程（这里等工具箱流量分析增加这个的分析后把截图换了）。
-
-     ![shuang_wireshark](../image/shuang_wireshark.png ':size=75%')
-
+  6. 查看[商用密码检测工具箱](https://www.ailawuyou.com/micetoolbox/)抓取的数据包，由图可以看到此次通讯为标准的TLS双向认证过程
+  
+     ![image-20220606171209502](../image/shuang_.png ':size=75%')
+  
   至此，"新渡-国密安全WEB网关（GMSWG）"的国密单向认证和双向认证演示完毕，结果与预期结果相同。
 
