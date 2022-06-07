@@ -7,10 +7,6 @@
 <p style="color:red;font-weight:bold">
        注:演示过程中有关国密测试均使用"奇安信安全浏览器"访问“新渡-国密安全WEB网关（GMSWG）”，使用Wireshark或‘商用密码检测工具箱’抓包分析。
 </p>
-
-
-
-
 * 奇安信安全浏览器
 
   [奇安信安全浏览器下载](https://www.qianxin.com/ctp/gmbrowser.html)
@@ -27,7 +23,7 @@
 
   [商用密码检测工具箱](https://www.ailawuyou.com/micetoolbox/)
 
-  ![image-20220602164724467](../image/image-20220602164724467.png)
+  ![image-20220602164724467](../image/image-20220602164724467.png ':size=50%')
   
   
   
