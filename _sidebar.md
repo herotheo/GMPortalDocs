@@ -11,5 +11,5 @@
 * [2.应用案例](#)
 * [3.最佳实践](#)
   * [3.1高可用+双层负载均衡](/_pages/0301fuzai.md)
-  * [3.2已有系统如何升级为国密算法](/_pages/0302gmgaizao.md)
+  * [3.2已有系统国密改造](/_pages/0302gmgaizao.md)
 * [4.产品动态](/_pages/04chapindongtai.md)
