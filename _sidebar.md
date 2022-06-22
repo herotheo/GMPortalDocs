@@ -14,5 +14,5 @@
 * [2.应用案例](#)
 * [3.最佳实践](#)
   * [3.1 已有系统进行国密改造](/_pages/0301gmgaizao.md)
-  * [3.2 使用Backend For Frontend(BFF)](/_pages/0302BFF.md)
+  * [3.2 BFF安全框架](/_pages/0302BFF.md)
 * [4.产品动态](/_pages/04chapindongtai.md)
